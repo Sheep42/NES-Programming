@@ -246,7 +246,7 @@ L0062:	rts
 	lda     #$1E
 	sta     $2001
 ;
-; while(NMI_flag == 0);
+; while(NMI_flag == 0); //NMI_flag is set in reset.s
 ;
 L0070:	lda     _NMI_flag
 	beq     L0070

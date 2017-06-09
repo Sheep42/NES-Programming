@@ -41,10 +41,11 @@ void main(void) {
 
 	//Loop forever
 	while(1) {
-		while(NMI_flag == 0);
+		while(NMI_flag == 0); //NMI_flag is set in reset.s
 		NMI_flag = 0;
 
-		//Wait 30 frames (~0.25s)
+		//Wait 15 frames (~0.25s) 
+		//Frame_Count increments in reset.s
 		if(Frame_Count == 15) {
 			loadText();
 			resetScroll();
